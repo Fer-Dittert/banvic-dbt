@@ -1,0 +1,32 @@
+models:
+  - name: dim_clientes
+    description: Modelo dimensão de clientes.
+    columns:
+      - name: pk_cliente
+        description: chave primaria da tabela clientes.
+      - name: nome_cliente
+        description: nome do cliente.
+      - name: email_cliente
+        description: email de contato do cliente.
+      - name: tipo_cliente
+        description: "Definição do tipo de cliente: PF ou PJ"
+      - name: ts_inclusao
+        description: TimeStamp da data de inclusão.
+      - name: cpfcnpj_cliente
+        description: cpf ou cnpj do cliente.
+      - name: data_nascimento_cliente
+        description: data de nascimento do cliente
+      - name: endereco_cliente
+        description: endereço completo do cliente
+      - name: cep_cliente
+        description: Numero do cep do cliente.
+      - name: cidade_cliente
+        description: Cidade do cliente.
+      - name: uf_cliente
+        description: Codigo UF do estado do cliente.
+    
+
+
+
+
+

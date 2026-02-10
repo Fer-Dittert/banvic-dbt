@@ -1,0 +1,43 @@
+
+sources:
+  - name: erp
+    description: esse é um sistema erp da banvic, com dados de clientes, colaboradores, contas e transaçoes
+    schema: erp_banvic
+    tables:
+      - name: localidades
+        description: tabela fonte de localidades com informaçao de cidade e estado.
+        columns: 
+          - name: cod_localidade
+            description: Chave primária da tabela localidades.
+            data_tests:
+              - unique
+              - not_null
+      
+      - name: clientes
+        description: tabela fonte de clientes com informaçoes pessoais de cada cliente da banvic.
+        columns: 
+          - name: cod_cliente
+            description: Chave primária da tabela clientes.
+            data_tests:
+              - unique
+              - not_null
+              
+      - name: colaboradores
+        description: tabela fonte de colaboradores com informaçoes pessoais de cada colaborador banvic, como nome, e-mail, CPF, data de nascimento.
+        columns: 
+          - name: cod_colaborador
+            description: Chave primária da tabela colaboradores.
+            data_tests:
+              - unique
+              - not_null
+              
+      - name: agencias
+        description: tabela fonte com informaçoes sobre agencias, como nome, endereço e tipo de agência e data de abertura.
+        columns: 
+          - name: cod_agencia
+            description: Chave primária da tabela agencias.
+            data_tests:
+              - unique
+              - not_null
+              
+      
