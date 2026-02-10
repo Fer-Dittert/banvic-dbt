@@ -1,0 +1,16 @@
+models:
+  - name: stg_erp__agencias
+    description: Modelo staging para agências.
+    columns:
+      - name: pk_agencia
+        description: Chave primária da tabela agência.
+      - name: fk_localidade
+        description: Chave estrangeira da tabela localidades.
+      - name: nome_agencia
+        description: Nome da agência.
+      - name: endereco_agencia
+        description: Endereço completo da agencia.
+      - name: data_de_abertura
+        description: Data de abertura da agencia.
+      - name: tipo_agencia
+        description: "Definição do tipo de agencia: Fisica ou Digital."                                      
