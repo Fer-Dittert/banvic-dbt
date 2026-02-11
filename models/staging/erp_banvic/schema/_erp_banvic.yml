@@ -54,7 +54,7 @@ sources:
           - name: num_conta
             data_tests:
             - unique
-              - not null
+              - not_null
 
       - name: propostas_credito
         description: tabela que armazena as propostas de credito feitas aos clientes, incluindo taxas de juros, valor da proposta, valor financiado, etc.
@@ -62,11 +62,11 @@ sources:
           - name: cod_proposta
             data_tests: 
               - unique
-              - not null
+              - not_null
       - name: transacoes
         description: tabela que registra as transaçoes feitas nas contas dos clientes, incluindo tipo da transaçao, valor e data da transaçao.
         columns:
           - name: cod_transacao
             data_tests: 
               - unique
-              - not null
+              - not_null
