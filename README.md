@@ -1,25 +1,59 @@
-# Indicium Academy
+# Banvic Analytics Engineering Project
 
-Repositório para ser utilizado no curso de Formação de Analytics Engineering by Indicium. Faça o fork deste repositório e o utilize durante as aulas práticas para ter os dados do Banvic disponíveis em seu ambiente. Configurado para utilização com Databricks.
+Projeto desenvolvido durante a **Formação em Engenharia de Analytics da Indicium Academy** com o objetivo de estruturar um fluxo de dados completo, desde a transformação e modelagem até o consumo em dashboards.
 
-## Instruções
+## Objetivo
 
-Todas as tabelas do banco fonte do Banvic serão carregadas como seeds pelo dbt. Os arquivos .csv com os dados já estão na pasta de seeds.
+Construir um pipeline analítico utilizando **dbt e Databricks**, organizando os dados em camadas analíticas e disponibilizando-os para análise em um dashboard no Power BI.
 
-Para fazer o carregamento de todas as tabelas usem o comando:
-- `dbt seed`
+## Arquitetura do Projeto
 
-Para carregar uma tabela especifíca utilizem o comando
-- `dbt seed -s nome_do_csv`
+O fluxo de dados foi estruturado da seguinte forma:
 
-### Problemas comuns
+Dados brutos (seeds)  
+↓  
+Transformação e modelagem com **dbt**  
+↓  
+Organização em camadas analíticas  
+- staging  
+- intermediate  
+- marts  
+↓  
+Consumo em **Power BI**
 
-Em caso a linha de comando do dbt fique com o status de estar sempre carregando, ou, o job do comando `dbt seed` fique rodando indefinitivamente mesmo após todas as tabelas forem carregadas você precisará reiniciar o terminal. Para isso, clique nos três pontos no canto inferior direito ou no lado direito da linha de comando e escolha a opção `Restart IDE`.
+## Tecnologias utilizadas
 
+- dbt
+- Databricks
+- SQL
+- Power BI
+- GitHub
 
-## Recursos:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](http://community.getbdt.com/) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Estrutura do projeto dbt
+
+O projeto segue boas práticas de modelagem analítica com separação em camadas:
+
+models/
+- staging
+- intermediate
+- marts
+
+Essa organização facilita manutenção, reutilização de modelos e clareza no fluxo de transformação dos dados.
+
+## Dashboard
+
+O dashboard foi desenvolvido no **Power BI** para explorar métricas de transações do banco Banvic, incluindo:
+
+- valor total transacionado
+- evolução temporal das transações
+- análise por estado
+- análise por tipo de transação
+
+## Como executar o projeto
+
+1. Clonar o repositório
+2. Instalar dependências do dbt
+3. Carregar os dados seeds
+
+```bash
+dbt seed
