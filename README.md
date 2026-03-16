@@ -49,6 +49,12 @@ O dashboard foi desenvolvido no **Power BI** para explorar métricas de transaç
 - análise por estado
 - análise por tipo de transação
 
+
+![Dashboard](images/dashboard-banvic.png)
+
+![Dashboard](images/dashboard-banvic2.png)
+
+
 ## Como executar o projeto
 
 1. Clonar o repositório
@@ -57,3 +63,4 @@ O dashboard foi desenvolvido no **Power BI** para explorar métricas de transaç
 
 ```bash
 dbt seed
+
